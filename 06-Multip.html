@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>PyScript Hello World</title>
+
+        <link rel="stylesheet" href="https://pyscript.net/releases/2022.9.1/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+        <style>
+           .MyFont1 { color:#FF0000; font-size:24px; }
+           .MyFont2 { color:#000000; font-size:18px; }
+        </style>
+
+    </head>
+
+    <body class="MyFont2">
+        <h1> Programas en Python ! </h1>
+        <section class="pyscript MyFont1">
+           <py-script>
+               display("--- Ejemplo en base 16 convertido a base 10 ---")
+               """
+               * ----------------------------------
+               *  Envio  a pantalla con y sin prefijo en valor ocatl
+               *  ---------------------------------
+               *
+               """
+               print("valores en base 2  y en base 10")
+               a = "0b11010"
+               b = "0b1111"
+               multip = int(a,2) * int(b,2)
+               print( "   %11s      %-7d " % ( a[2:], int(a,2) ) )
+               print( " * %11s    - %-7d " % ( b[2:], int(b,2) ) )
+               print( " = %11s    = %-7d " % ( bin(multip)[2:], multip ) )
+
+               print("\nvalores en base  8 y en base 10")
+               a = "0o74561"
+               b = "0o65153"
+               multip = int(a,8) * int(b,8)
+               print( "   %11s      %-7d " % ( a[2:], int(a,8) ) )
+               print( " * %11s    - %-7d " % ( b[2:], int(b,8) ) )
+               print( " = %11s     = %-7d " % ( oct(multip)[2:], multip ) )
+
+               print("\nvalores en base  16 y en base 10")
+               a = "0x74561"
+               b = "0x6a153"
+               multip = int(a,16) * int(b,16)
+               print( "   %11s      %-7d " % ( a[2:], int(a,16) ) )
+               print( " * %11s    - %-7d " % ( b[2:], int(b,16) ) )
+               print( " = %11s     = %-7d " % ( hex(multip)[2:], multip ) )
+
+
+           </py-script>
+           <div id="out1" class="pyscript MyFont2"></div> 
+        </section>
+    </body>
+</html>

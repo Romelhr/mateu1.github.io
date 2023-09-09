@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>PyScript Hello World</title>
+
+        <link rel="stylesheet" href="https://pyscript.net/releases/2022.9.1/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+        <style>
+           .MyFont1 { color:#FF0000; font-size:24px; }
+           .MyFont2 { color:#000000; font-size:18px; }
+        </style>
+
+    </head>
+
+    <body class="MyFont2">
+        <h1>¡ Programas en Python ! </h1>
+        <section class="pyscript MyFont1">
+           <py-script>
+               display("--- Ejemplo en base 16 convertido a base 10 ---")
+               """
+               * ----------------------------------
+               *  Envio  a pantalla con y sin prefijo en valor ocatl
+               *  ---------------------------------
+               *
+               """
+               print("valores en base 16 y en base 10")
+               a = "0xA"
+               b = "0xF4"
+               
+               A = int(a, 16)         # convierte a base 10
+               B = int(b, 16)
+               print(a, " = ",A, " y ", b, " = ", B)
+               print(a[2:], " y ", b[2:]) 
+           </py-script>
+           <div id="out1" class="pyscript MyFont2"></div> 
+        </section>
+    </body>
+</html>
